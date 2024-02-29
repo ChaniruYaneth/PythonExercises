@@ -1,7 +1,11 @@
 from tkinter import *
 
+count = 0
+
 def btn_click():
-    print("Button Clicked")
+    global count
+    count = count + 1
+    btn.config(text=count)
 
 
 window = Tk()
