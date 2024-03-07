@@ -4,7 +4,7 @@ count = 0
 
 def btn_click():
     global count
-    count = count + 1
+    count = count + 2
     btn.config(text=count)
 
 
