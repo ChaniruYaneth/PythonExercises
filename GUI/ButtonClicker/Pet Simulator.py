@@ -1,28 +1,26 @@
-class Pet ():
+class Pet():
     name = None
     fullness = 0
-   
+
     def __init__(self, name):
         self.name = name
-       
+
     def eat(self, food):
         print(self.name + " is eating " + food + "...")
         if food == "carrots":
-            self.fullness = self.fullness + 10
+            self.fullness += 10
         elif food == "grass":
-            self.fullness = self.fullness + 5
+            self.fullness += 5
         elif food == "water":
-            self.fullness = self.fullness + 1
-           
-        print(self.name + " is now " + self.fullness + "...")
-        
-pet_owner_name = input("What is your name?")
-print("Welcome, ", pet_onwner_name)
+            self.fullness += 1
 
+        print(self.name + " is now " + str(self.fullness) + " full.")  # Corrected print statement
+
+
+pet_owner_name = input("What is your name? ")
+print("Welcome,", pet_owner_name)
 
 pet_1 = Pet("Rocky")
 
-
-#carrots - 10 fullness
-#grass - 5 fullness
-#water - 1 fullness
+food_eaten = input("What should " + pet_1.name + " eat? ")  # Ask for the food eaten by the pet
+pet_1.eat(food_eaten)  # Call the eat method with the food eaten by the pet
